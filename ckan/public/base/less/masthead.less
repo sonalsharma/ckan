@@ -3,8 +3,8 @@
 .account-masthead {
   .clearfix();
   min-height: 30px;
-  color: @mastheadTextColor;
-  background: darken(@mastheadBackgroundColor, 10%) url("@{bgPath}");
+  color: #fff;
+  background: #4e4e4e;
   .account {
     float: right;
     ul {
@@ -15,7 +15,7 @@
         border-left: 1px solid darken(@mastheadBackgroundColor, 15%);
         a {
           display: block;
-          color: mix(@mastheadBackgroundColor, @mastheadLinkColor, 25%);
+          color: #fff;
           font-size: 13px;
           font-weight: bold;
           padding: 0 10px;
@@ -73,16 +73,23 @@
 
 .masthead {
   .clearfix();
-  min-height: 55px;
-  color: @mastheadTextColor;
-  background: @mastheadBackgroundColor url("@{bgPath}");
+  min-height: 80px;
+  color: #464646;
+  background-color:#fff;
+  border-bottom: 1px solid #e4e4e4;
+  width:100%;
 
   .container {
     position: relative;
+    margin-top: 1em;
   }
 
   a {
-    color: @mastheadLinkColor;
+    //color: #464646;
+  }
+
+  h1 {
+    color:#CC3838;
   }
 
   hgroup {
@@ -93,9 +100,25 @@
       line-height: 1.5;
     }
     h1 {
-      font-weight: 900;
-      letter-spacing: -1px;
+      font-weight: 500;
+     // letter-spacing: -1px;
       margin: 3px 0;
+      font-family: 'Paytone One', sans-serif;
+      color:#FF6600;
+      font-size: 2em;
+
+      a {
+        color:#FF6600;
+        transition:all 200ms linear;
+
+        &:hover {
+          text-decoration: none;
+          color:#464646;
+        }
+        &:active {
+          text-decoration: none;
+        }
+      }
     }
     h2 {
       position: absolute;
@@ -128,7 +151,9 @@
       li {
         a:hover,
         &.active a {
-          background-color: darken(@mastheadBackgroundColor, 10%);
+          background:transparent;
+          color:#338C8C;
+          transition: all 200ms linear;
         }
       }
     }
@@ -139,7 +164,7 @@
   .nav > .active > a,
   .nav > .active > a:hover,
   .nav > .active > a:focus {
-    color: #fff;
+    color: #464646;
     text-shadow: none;
   }
 
@@ -158,10 +183,10 @@
   .btn-navbar.active,
   .btn-navbar.disabled,
   .btn-navbar[disabled] {
-    background-color: darken(@mastheadBackgroundColor, 10%);
+    //background-color: darken(@mastheadBackgroundColor, 10%);
     background-image: none;
     border:none;
-    .box-shadow(none);
+    //.box-shadow(none);
     text-shadow: none;
     margin-top:15px;
     .icon-bar {
@@ -186,7 +211,7 @@
 @media (max-width: 767px) {
   .account-masthead {
     margin-left:-20px;
-    margin-right:-20px;
+    //margin-right:-20px;
     padding-left:20px;
     padding-right:20px;
   }
